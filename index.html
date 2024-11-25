@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Network Diagram</title>
+    <link rel="icon" href="images\2.jpg" type="image/x-icon">
+
+    <!-- ربط ملف CSS الخارجي -->
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script defer src="script.js"></script>
+    <!-- <script src="script.js" defer></script> -->
+
+</head>
+
+<body>
+    <header>
+        <!-- Logo Section -->
+        <div class="logo">
+            <a href="https://uoaleppo.net/" target="_blank">
+                <img src="images\1.jpeg" alt="Logo">
+            </a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home-section">Home</a></li>
+                <li><a href="#تنفيذ_المخطط">Implementation plan</a></li>
+                <li><a href="#من_نحن">About us</a></li>
+            </ul>
+        </nav>
+
+        <!-- Title Section -->
+        <div class="title">
+            Operations Research Project
+        </div>
+
+
+    </header>
+    <section id="home-section" class="home-section">
+        <div class="home-content">
+            <h1>Operations Research Project</h1>
+            <p><strong>University of Aleppo in the Liberated Areas</strong></p>
+            <p>A program developed to draw network diagrams.</p>
+            <p><strong>Prepared by:</strong><br> Nedal Al-Othman<br> HaFiz Al-Issa</p>
+            <p><strong>Supervised by:</strong><br> Dr. Mahmoud Al-Mousa<br>Eng. Obayia Boulad</p>
+
+        </div>
+    </section>
+
+
+
+    <section id="تنفيذ_المخطط">
+        <h2>Dynamic Network Diagram:</h2>
+        <div class="container">
+            <div id="form-container">
+                <h3>Enter Activities</h3>
+                <form id="activity-form">
+                    <label for="activity-name">Activity Name:</label><br>
+                    <input type="text" id="activity-name" required><br>
+                    <label for="start-node">Start Node:</label><br>
+                    <input type="number" id="start-node" required><br>
+                    <label for="end-node">End Node:</label><br>
+                    <input type="number" id="end-node" required><br>
+                    <label for="duration">Duration:</label><br>
+                    <input type="number" id="duration" required><br><br>
+                    <button type="button" onclick="addActivity()">Add Activity</button>
+                </form>
+
+                <h3>Activities List</h3>
+                <ul id="activities-list"></ul>
+                <button onclick="drawDiagram()">Draw Diagram</button>
+            </div>
+            <div id="chart-container">
+                <svg id="chart" width="800" height="600"></svg>
+            </div>
+        </div>
+    </section>
+
+    <section id="من_نحن" class="about-us">
+        <h2>About Us</h2>
+        <p>We are university students in our fourth year at the Faculty of Computer Engineering. We are web developers and programmers who specialize in various programming languages and tracks. Some of the main programming languages we excel at are:</p>
+
+        <div class="programming-languages">
+            <div class="language-box">
+                <img src="images\11.png" alt="Python">
+                <p>Python</p>
+            </div>
+            <div class="language-box">
+                <img src="images\13.png" alt="JavaScript">
+                <p>JavaScript</p>
+            </div>
+            <div class="language-box">
+                <img src="images\12.png" alt="Java">
+                <p>Java</p>
+            </div>
+            <div class="language-box">
+                <img src="images\14.png" alt="C++">
+                <p>C++</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-left">
+                <p>© 2024 NEDAL_ALOTHMA. All rights reserved.</p>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Use</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer-center">
+                <p>Follow us on:</p>
+                <ul class="social-links">
+                    <li><a href="https://facebook.com" target="_blank">Facebook</a></li>
+                    <li><a href="https://twitter.com" target="_blank">Twitter</a></li>
+                    <li><a href="https://instagram.com" target="_blank">Instagram</a></li>
+                </ul>
+            </div>
+            <div class="footer-right">
+                <form>
+                    <label for="newsletter">Subscribe to our newsletter:</label>
+                    <input type="email" id="newsletter" name="newsletter" placeholder="Enter your email">
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="contact-info">
+            <p><strong>ENG: NEDAL_ALOTHMA</strong></p>
+            <p><strong>EMAIL:</strong> <a href="mailto:nedalalosman@gmail.com">nedalalosman@gmail.com</a></p>
+            <p><strong>PHONE:</strong> 00905549281032</p>
+            <p><strong>ENG: HaFiz Al-Issa</strong></p>
+            <p><strong>EMAIL:</strong> <a href="mailto:hafiz.stof.issa@gmail.com">hafiz.stof.issa@gmail.com</a></p>
+            <p><strong>PHONE:</strong> 00352681598957</p>
+        </div>
+    </footer>
+
+
+
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

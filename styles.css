@@ -1,0 +1,560 @@
+/* Basic reset for margin and padding */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Style for the header */
+
+header {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1A1A19;
+    color: white;
+    padding: 20px 30px;
+    text-align: center;
+}
+
+
+/* Style for the logo */
+
+.logo img {
+    height: 100px;
+    /* Adjust height as needed */
+}
+
+
+/* Style for the title */
+
+.title {
+    text-align: left;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+
+/* Responsive design */
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+    .title {
+        font-size: 30px;
+    }
+    .logo img {
+        height: 80px;
+        /* Adjust logo size for smaller screens */
+    }
+}
+
+
+/* Navigation styling */
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+
+/* Section styling */
+
+section {
+    padding: 50px;
+    margin: 20px 0;
+    background: linear-gradient(45deg, hsl(0, 0%, 0%), #1A1A19);
+    /* Same as Home section */
+    color: #859F3D;
+    border-radius: 8px;
+}
+
+
+/* Specific section colors */
+
+
+/* Body and general styles */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1A1A19;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 30px 50px;
+    gap: 40px;
+    /* Spacing between the form and chart containers */
+}
+
+
+/* Form container */
+
+#form-container {
+    width: 40%;
+    background-color: #F6FCDF;
+    padding: 25px;
+    border-radius: 8px;
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    /* Spacing between form elements */
+}
+
+
+/* Chart container */
+
+#chart-container {
+    width: 65%;
+    background-color: #F6FCDF;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    box-sizing: border-box;
+    /* Ensures padding is included in width */
+}
+
+
+/* Input field styling */
+
+input[type="text"],
+input[type="number"] {
+    width: 100%;
+    /* Full width of the form container */
+    padding: 10px;
+    margin-bottom: 15px;
+    /* Consistent spacing between inputs */
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    box-sizing: border-box;
+}
+
+
+/* Button styling */
+
+button {
+    background-color: #2ecc71;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 14px;
+    align-self: center;
+    /* Center the button in the form */
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #27ae60;
+}
+
+
+/* Node circle styling for diagrams */
+
+.node circle {
+    fill: #69b3a2;
+    stroke: #555;
+    stroke-width: 2px;
+}
+
+
+/* Node text styling for diagrams */
+
+.node text {
+    font: 14px sans-serif;
+    text-anchor: middle;
+    fill: #34495E;
+}
+
+
+/* Link styling for diagrams */
+
+.link {
+    fill: none;
+    stroke: #333;
+    stroke-width: 2px;
+    marker-end: url(#arrow);
+}
+
+
+/* Link label styling for diagrams */
+
+.link-label {
+    font: 12px sans-serif;
+    fill: #333;
+    background-color: white;
+    padding: 3px 5px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Navigation bar */
+
+
+/* تعديل طريقة عرض الأنشطة بحيث تظهر في سطور منفصلة */
+
+#activities-list {
+    list-style-type: none;
+    /* إلغاء النقاط */
+    padding: 0;
+    margin: 0;
+}
+
+#activities-list li {
+    display: block;
+    /* عرض العناصر في سطور منفصلة */
+    margin-bottom: 10px;
+    /* تباعد بين الأنشطة */
+    background-color: #000;
+    padding: 8px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(233, 227, 227, 0.1);
+}
+
+ul {
+    list-style: none;
+    color: white;
+    /* Text color outside boxes set to white */
+    margin: 0;
+}
+
+li {
+    display: inline;
+    margin-right: 20px;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+a:hover {
+    color: #2ecc71;
+    /* Change color on hover */
+}
+
+
+/* Home section styles */
+
+.home-section {
+    height: 100vh;
+    /* Full screen height */
+    background: linear-gradient(45deg, hsl(0, 0%, 0%), #1A1A19);
+    /* Green and teal gradient */
+    color: #859F3D;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    animation: fadeIn 2s ease-in-out;
+    /* Animation for fade-in effect */
+}
+
+
+/* Content container */
+
+.home-content {
+    background-color: #F6FCDF;
+    /* Light transparent white background */
+    padding: 60px;
+    /* Increased padding for larger box */
+    border-radius: 20px;
+    box-shadow: 0 10px 50px rgba(0, 0, 0, 0.15);
+    max-width: 900px;
+    /* Increased max-width to enlarge the box */
+    width: 100%;
+    transform: translateY(-50px);
+    animation: slideInUp 1s ease-out;
+    /* Animation for content slide-up */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.home-content:hover {
+    transform: translateY(0px);
+    /* Smooth upward movement on hover */
+    box-shadow: 0 20px 80px rgba(0, 0, 0, 0.3);
+    /* Enhanced shadow on hover */
+}
+
+.home-content h1 {
+    font-size: 48px;
+    /* Larger heading size */
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #005d10;
+    /* Darker greenish-gray for contrast */
+}
+
+.home-content p {
+    font-size: 20px;
+    /* Slightly larger text for better readability */
+    line-height: 1.8;
+    margin-bottom: 20px;
+    opacity: 0;
+    animation: fadeInText 2s forwards;
+    /* Text fade-in */
+    animation-delay: 1s;
+    /* Delay for text appearance */
+}
+
+.home-content strong {
+    font-size: 22px;
+    color: #000000;
+    /* Sky blue color for headings */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+@media (max-width: 768px) {
+    .home-content {
+        padding: 40px;
+    }
+    .home-content h1 {
+        font-size: 36px;
+        /* Slightly smaller heading size for mobile */
+    }
+    .home-content p {
+        font-size: 18px;
+        /* Adjust text size for smaller screens */
+    }
+}
+
+
+/* Keyframe animations */
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInUp {
+    0% {
+        transform: translateY(-50px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+@keyframes fadeInText {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+/* About Us Section */
+
+.about-us {
+    background: linear-gradient(45deg, hsl(0, 0%, 0%), #1A1A19);
+    /* Same as Home section */
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+    border-radius: 20px;
+    box-shadow: 0 10px 50px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 2s ease-in-out;
+}
+
+
+/* Title Styling */
+
+.about-us h2 {
+    font-size: 48px;
+    color: #859F3D;
+    /* Dark greenish-gray */
+    margin-bottom: 20px;
+}
+
+
+/* Paragraph Styling */
+
+.about-us p {
+    font-size: 20px;
+    line-height: 1.8;
+    color: #ecf0f1;
+    margin-bottom: 40px;
+    opacity: 0;
+    animation: fadeInText 2s forwards;
+    animation-delay: 1s;
+}
+
+
+/* Container for the Language Boxes */
+
+.programming-languages {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+
+/* Individual Language Boxes */
+
+.language-box {
+    background-color: #F6FCDF;
+    padding: 30px;
+    border-radius: 15px;
+    width: 200px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.language-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+.language-box img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    margin-bottom: 15px;
+}
+
+.language-box p {
+    font-size: 18px;
+    color: #31511e;
+    /* Sky blue for text */
+    font-weight: bold;
+}
+
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+    .programming-languages {
+        flex-direction: column;
+        align-items: center;
+    }
+    .language-box {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    font-size: 14px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.footer-left,
+.footer-center,
+.footer-right {
+    flex: 1;
+    padding: 0 20px;
+}
+
+.footer-left ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-left ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+.footer-left ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-left ul li a:hover {
+    color: #2ecc71;
+}
+
+.social-links {
+    list-style: none;
+    padding: 0;
+}
+
+.social-links li {
+    display: inline;
+    margin: 0 10px;
+}
+
+.social-links li a {
+    color: white;
+    text-decoration: none;
+}
+
+.contact-info {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.contact-info p {
+    margin: 5px 0;
+}
+
+.contact-info a {
+    color: #2ecc71;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
